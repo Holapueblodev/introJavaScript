@@ -2,7 +2,7 @@
 //Reserva de memoria, donde guardo informacion. La informacion puede cambiar (en tiempo de ejecucion)
 
 //var
-var name = "Adrian"
+//var name = "Adrian"
 
 let number = 1
 
@@ -14,7 +14,7 @@ const lastName = "Cordoba";
 
 //-----------------------------------------------------------------------------------------------//
 
-var name = "Diego";
+//var name = "Diego";
 
 //Incremento y decremento
 number++;
@@ -33,7 +33,24 @@ number--;
 //Escribir una oración o texto por consola (que cuente lo que quieran)
 //La oración o texto debe estar compuesto por 3 variables, 3 constantes. Y al menos 3 tipos de datos.
 
+let age = 33
+
+
+const name = "Carlos"
+const firstName = "Sánchez"
+const secondName = "Yerga"
+
+let roadType = "Calle"
+let street = "Teresina"
+number = 27
+let floor = 3
+let letter = "C" 
+
+let address = `${roadType} ${street}, ${number} ${floor}${letter}`
+console.info(`Me llamo ${name} ${firstName} ${secondName}, tengo ${age} años vivo en ${address}`)
+
 //-----------------------------------------------------------------------------------------------//
+
 
 //Funciones>
 //Una función es un bloque de instrucciones que puede ejecutarse tantas veces como desee.
@@ -53,6 +70,10 @@ var resultado = medirSuperficieCuadrado(longitudLado)
 console.info(resultado)
 
 
+let s1 = '2 + 2'              // crea una string primitiva
+let s2 = new String('2 + 2')  // crea un objeto String
+console.log(eval(s1))         // devuelve el número 4
+console.log(eval(s2))         // devuelve la cadena "2 + 2"
 
 
 
@@ -60,13 +81,40 @@ console.info(resultado)
 
 //Ejercicios//
 //1
-//Defina una función helloque devuelva 'Hello world!'. 
+//Defina una función hello que devuelva 'Hello world!'. 
 //Imprimirla en consola con un string que nos calare que ejercicio es.
+
+
+
+function hello(a , b) {
+  return a + b;
+}
+
+const h = "Hello"
+const w = "World"
+
+console.info(hello(h, w))
+
 
 //2
 //Defina dos funciones.
 //La primera función adebería devolver 'Hello a!'y la segunda función bdebería devolver 'Hello b!'.
 //Imprimirla en consola con un string que nos calare que ejercicio es.
+
+function HelloA(){
+  return 'Hello a!'
+}
+
+let resultA = HelloA()
+
+function HelloB(){
+  return 'Hello b!'
+}
+
+let resultB = HelloB()
+
+console.info(`Resultado ejercicio 2 "Funcion 1"--> ${resultA} "Funcion 2"--> ${resultA}`)
+
 
 //3
 //Defina una función greet que devuelva el valor 'Haydo!'.
@@ -74,6 +122,16 @@ console.info(resultado)
 //Llame a la función greety asigne el resultado de la llamada a la variable salutation.
 //Imprimirla en consola con un string que nos calare que ejercicio es.
 
+const a = "Haydo"
+const b = "!"
+
+function greet(a, b){
+  return a + b;
+}
+
+let salutation = greet(a, b)
+
+console.info(`Resultado ejercicio 3 --> ${salutation}`)
 
 //Parámetros
 
@@ -91,10 +149,19 @@ let result = give('apple');
 //La variable input se devuelve en la única línea de código de la función. 
 //Este retorno se asigna a la variable result. Finalmente, result tiene el valor 'apple'.
 
+console.info(result)
+
 //Ejercicio
 //Escribir una función echo que también devuelva el parámetro pasado. 
 //echo('Greta') debe volver 'Greta'y echo('CO2') debe volver'CO2'
 
+function echo(a){
+  return a;
+}
+
+console.info(echo('Greta'))
+
+console.info(echo('CO2'))
 
 //CONDICIONALES ------- que son???
 //ARRAYS ------que son??? que funciones existen para maniular Arrays?
