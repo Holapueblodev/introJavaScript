@@ -74,7 +74,7 @@ let s1 = '2 + 2'              // crea una string primitiva
 let s2 = new String('2 + 2')  // crea un objeto String
 console.log(eval(s1))         // devuelve el número 4
 console.log(eval(s2))         // devuelve la cadena "2 + 2"
-
+console.log(s2)
 
 
 //-----------------------------------------------------------------------------------------------//
@@ -113,7 +113,11 @@ function HelloB(){
 
 let resultB = HelloB()
 
-console.info(`Resultado ejercicio 2 "Funcion 1"--> ${resultA} "Funcion 2"--> ${resultA}`)
+console.info(`Resultado ejercicio 2 "Funcion 1"--> ${resultA} "Funcion 2"--> ${resultB}`)
+
+console.info(`Resultado ejercicio 2 "Funcion 1"-->`+ HelloA() + `"Funcion 2"-->` + HelloB())
+
+console.info(HelloA())
 
 
 //3
@@ -131,7 +135,7 @@ function greet(a, b){
 
 let salutation = greet(a, b)
 
-console.info(`Resultado ejercicio 3 --> ${salutation}`)
+console.log(`Resultado ejercicio 3 --> ${salutation}`)
 
 //Parámetros
 
@@ -163,5 +167,65 @@ console.info(echo('Greta'))
 
 console.info(echo('CO2'))
 
+let expr = prompt("Escribe una expresión matemática:", '2*3+2');
+
+alert( eval(expr) );
+
 //CONDICIONALES ------- que son???
+
+// let edad = 18
+// let nombre = "Raul"
+
+// if(edad>=18){
+
+//   console.info(nombre + " puede conducir")
+// }
+// else{
+//   console.info(nombre + " no puede conducir")
+// }
+
+
+let edadDeRaul = 17;
+let edadDeLucia = 20;
+let edadDeCarlos = 89;
+const nombre = "Raul";
+
+function validarEdad(edad) {
+  var resultado;
+  switch (edad) {
+    case edad >= 18:
+      resultado = " puede conducir";
+      break;
+    case edad >= 70:
+      resultado = " deja la herencia y no conduzcas";
+      break;
+    case edad >= 80:
+      resultado = " deja la herencia y no conduzcas";
+      break;
+    default:
+      resultado = " no puede conducir tampoco";
+  }
+
+  return resultado;
+}
+console.info(validarEdad(edadDeLucia));
+
+
+
+
+
+
 //ARRAYS ------que son??? que funciones existen para maniular Arrays?
+
+
+// Var no detecta si ya hemos declarado la variable
+// var elegante =5
+// var elegante = 7
+
+// Sin embargo LET y CONST si detectan que existe un error
+
+// let comida = 7
+// let comida = 7
+
+// const cerveza = 'Fria'
+// const cerveza = 'Caliente'
