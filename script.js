@@ -192,15 +192,15 @@ const nombre = "Raul";
 
 function validarEdad(edad) {
   var resultado;
-  switch (edad) {
-    case edad >= 18:
+  switch (true) {
+    case (edad >= 18 && edad < 70):
       resultado = " puede conducir";
       break;
-    case edad >= 70:
+    case (edad >= 70 && edad < 80):
       resultado = " deja la herencia y no conduzcas";
       break;
-    case edad >= 80:
-      resultado = " deja la herencia y no conduzcas";
+    case (edad >= 80):
+      resultado = " deja la herencia y no conduzcas2";
       break;
     default:
       resultado = " no puede conducir tampoco";
@@ -208,7 +208,7 @@ function validarEdad(edad) {
 
   return resultado;
 }
-console.info(validarEdad(edadDeLucia));
+console.info(validarEdad(15));
 
 
 
@@ -229,3 +229,20 @@ console.info(validarEdad(edadDeLucia));
 
 // const cerveza = 'Fria'
 // const cerveza = 'Caliente'
+
+//Arrays [] lista o conjunto grupo de datos, los datos pueden ser de varios tipos.
+
+
+//forEach atado a los Arrays
+
+let listaDeNumeros= [5, 78, 24, 567]
+
+listaDeNumeros.forEach(function(numero){
+
+  if(numero < 50){
+    console.info(numero)
+  }
+  console.info("numero mayor a 50 por eso no lo imprimo")
+})
+
+console.info(listaDeNumeros[3])
